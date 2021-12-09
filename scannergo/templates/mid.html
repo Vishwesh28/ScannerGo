@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <center>    
+        <br>
+        <br>
+        <br>
+    </center>
+    <font size="3"
+          face="arial"
+          color="black">
+    <button type="submit" style="background-color:#0066FF; border-collapse:collapse; border-radius:5px 5px; width:80px; height:40px; color:white; " onclick=location.href="{% url 'run' %}"; value="Done" >Go </button>
+    </font>
+    
+{% endblock %}

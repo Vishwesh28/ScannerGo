@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <center>    
+        {% if images %}
+        	{% for image in images %}
+		        <img src="{{ MEDIA_URL }}/{{ image }}" alt="{{ image }}">
+                <br>
+	        {% endfor %}
+        {% else %}
+	        <p>No image available.</p>
+        {% endif %}
+        {% load  static %}
+        <img src="{% static 'media/submissions/input_image.jpg' %}" />
+        <br>
+    </center>
+    <font size="3"
+          face="arial"
+          color="black">
+    <button type="submit" style="background-color:#0066FF; border-collapse:collapse; border-radius:5px 5px; width:80px; height:40px; color:white; " onclick=location.href="{% url 'del' %}"; value="Done" >Done </button>
+    </font>
+    
+{% endblock %}
